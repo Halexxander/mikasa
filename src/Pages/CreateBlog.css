@@ -1,0 +1,63 @@
+/* BlogCreator.css */
+
+.blog-creator {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(207, 196, 180);
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: grab;
+}
+
+.text-editors button {
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  transition: .6s;
+  cursor:grab;
+}
+
+.submit-button button {
+  background-color: black;
+  color: mintcream;
+  padding: 10px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top:10px;
+}
+
+.submit-button button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.6s;
+  box-shadow: white;
+}

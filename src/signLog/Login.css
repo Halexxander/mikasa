@@ -1,0 +1,40 @@
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .login-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .redirect-text {
+    margin-top: 10px;
+  }
+  .redirect-text a {
+    color: #007bff;
+    text-decoration: none;
+  }

@@ -1,0 +1,53 @@
+/* homepage.css */
+
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  
+    background-size:100%;
+    background-position: center;
+  }
+  
+  .circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* To ensure the image stays within the circle */
+    margin: 50px;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle while maintaining aspect ratio */
+  }
+  
+  h1 {
+    margin-top: 20px;
+    font-size: 32px;
+    color: black;
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  .myName:hover{
+    font-size: 70px;
+  }
+  
+  .typing-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: black;
+    font-size: large;
+    /* Add any other styling for the typing text here */
+  }
+  
