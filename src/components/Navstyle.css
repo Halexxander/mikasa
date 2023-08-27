@@ -1,24 +1,30 @@
-/* NewSidebar.css */
+/* Navstyle.css */
 
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
-  width: 1px; /* Smaller width */
+  width: 0;
   background-color: grey;
   z-index: 1;
-  opacity: 0%;
-  transition: .5s;
+  transition: width 0.3s;
+  overflow-x: hidden;
 }
 
-.sidebar:hover {
-  opacity: 100%;
-  width: 250px;
+.sidebar.expanded {
+  width: 250px; /* Adjust this value to control the width of the expanded sidebar */
 }
 
-.sidebar h4 {
-  display: none; /* Hide the text */
+.sidebar .logo {
+  text-align: center;
+  margin: 20px;
+}
+
+.sidebar .logo img {
+  width: 80px;
+  border-radius: 50%;
+  transition: .3s;
 }
 
 .sidebar ul {
@@ -28,118 +34,25 @@
 }
 
 .sidebar ul li {
-  text-align: left;
-  display: flex; /* Display items in a row */
-  align-items: center; /* Vertically center items */
+  padding: 10px;
 }
 
 .sidebar ul li a {
   color: white;
   text-decoration: none;
-
-  font-family: Helvetica;
-  margin: 10px 20px ;
-  font-weight:bolder;
-  padding: 20px 10px; /* Add spacing to the left of the text */
-  display: flex; /* Display items in a row */
-  align-items: center; /* Vertically center items */
-  transition: color 0.4s; /* Smooth color transition on hover */
-}
-.sidebar ul li a #log{
-  align-items: left;
-  margin-botton: 50px;
-}
-
-.sidebar ul li a:hover {
-  color: black; 
-  
-}
-
-/* NewSidebar.css */
-.sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
   font-size: 20px;
-  padding-left: 15px; /* Add more space after the icon */
   display: flex;
   align-items: center;
   transition: color 0.4s;
-  position: relative; /* Position for pseudo-elements */
 }
 
-.sidebar ul li a::before,
-.sidebar ul li a::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.3); /* Transparent background color */
-  transition: opacity 0.3s;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
+.sidebar ul li a:hover {
+  color: black;
 }
 
-.sidebar ul li a::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.3); /* Transparent background color */
-  transition: opacity 0.3s;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  width: 5px; /* Adjust the width of the plate */
-  height: 100%; /* Make the plate cover the entire height */
-  opacity: 0;
-}
-
-.sidebar ul li a:hover::before,
-.sidebar ul li a:hover::after {
-  opacity: 1;
-}
-
-
-.sidebar .logo {
-  text-align: left; /* Center the logo horizontally */
-  margin-top: 20px;
- margin-left: 15%;
-}
-
-.sidebar .logo img {
-  width: 80px; 
-  border-radius: 50%;
-  transition: .5s;
-}
-.sidebar .logo img:hover{
-  width: 130px
-}
-
-/* Navstyle.css */
-
-/* Toggle the sidebar to the right on mobile */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .sidebar::after {
- 
-    width: 10px;
+  .sidebar.expanded {
+    width: 100%;
   }
-}
-
-
-
-
-/* Show the toggle button on mobile */
-@media (max-width: 768px) {
-  .toggle-button {
-    display: block;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-}
-
-.toggleNav{
-margin-top: 20px;
-margin-left: 15px;
 }

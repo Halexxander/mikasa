@@ -1,20 +1,15 @@
-// src/components/SearchPage.jsx
 import React, { useState } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../config/firebase";
 
 function Search() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = () => {
-    // Perform your search logic here and update searchResults state
-    // For now, let's simulate some search results
-    const results = [
-      "Result 1",
-      "Result 2",
-      "Result 3",
-      "Result 4",
-      "Result 5",
-    ];
+  const handleSearch = async () => {
+    const q = query(collection(db, "blogs"), where("title", "==", searchQuery));
+    const querySnapshot = await getDocs(q);
+    const results = querySnapshot.docs.map((doc) => doc.data());
     setSearchResults(results);
   };
 
@@ -34,7 +29,7 @@ function Search() {
         <h2>Search Results:</h2>
         <ul>
           {searchResults.map((result, index) => (
-            <li key={index}>{result}</li>
+            <li key={index}>{result.title}</li>
           ))}
         </ul>
       </div>
