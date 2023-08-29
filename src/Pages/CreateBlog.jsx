@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FaBold, FaItalic, FaUnderline, FaCode } from 'react-icons/fa';
 import { db } from '../config/firebase'; 
 import { collection, addDoc } from 'firebase/firestore'; 
-
+import Authorization from '../components/Authorization';
 
 const BlogCreator = () => {
 

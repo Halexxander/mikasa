@@ -8,6 +8,7 @@ import Projects from "./Pages/Projectpage";
 import Search from "./Pages/Search"
 import Login from "./signLog/Login"
 import SignUp from './signLog/SignUp';
+import BlogDetailPage from './Pages/BlogDetailPage';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/blog/:id" element={<BlogDetailPage />} />
         
       </Routes>
     </div>

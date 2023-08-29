@@ -7,13 +7,13 @@
   height: 100%;
   width: 0;
   background-color: grey;
-  z-index: 1;
-  transition: width 0.3s;
+  z-index: 0;
+  transition: width 0.4s;
   overflow-x: hidden;
 }
 
 .sidebar.expanded {
-  width: 250px; /* Adjust this value to control the width of the expanded sidebar */
+  width: 200px; /* Adjust this value to control the width of the expanded sidebar */
 }
 
 .sidebar .logo {

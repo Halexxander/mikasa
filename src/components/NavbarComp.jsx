@@ -32,7 +32,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleMouseOver = (e) => {
-      if (e.clientX < 100) { // adjust this value to control the sensitive area
+      if (e.clientX < 50) { // adjust this value to control the sensitive area
         setSidebarExpanded(true);
       }
     };

@@ -7,7 +7,10 @@ function Search() {
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = async () => {
-    const q = query(collection(db, "blogs"), where("title", "==", searchQuery));
+    const q = query(
+      collection(db, "blogs"),
+      where("title", "array-contains", searchQuery)
+    );
     const querySnapshot = await getDocs(q);
     const results = querySnapshot.docs.map((doc) => doc.data());
     setSearchResults(results);

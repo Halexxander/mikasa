@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "yaeger-c49c8"
-  }
+    "default": "netshack-a8b21",
+    "staging": "netshack-a8b21"
+  },
+  "targets": {},
+  "etags": {}
 }
